@@ -1,0 +1,91 @@
+<!doctype html>
+<!--=======================================================
+//
+//     FILE : index.html
+//
+//  PROJECT : Web Serial Template
+//
+//   AUTHOR : Bill Daniels
+//            Copyright 2023-2024, D+S Tech Labs, Inc.
+//            All Rights Reserved
+//
+//======================================================-->
+
+<html lang="en-us">
+
+  <!-- Head -->
+  <head>
+
+    <!-- These three meta tags MUST come first in the <head> tag. -->
+    <!-- All other <head> content must come AFTER these tags.     -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Web Serial Template</title>
+
+    <style>
+
+      body
+      {
+        margin     : 0;
+        padding    : 0;
+        min-height : 100vh;
+
+        color            : #F0F0F0;
+        background-color : #303040;
+
+        text-align : center;
+      }
+
+      #dataWindow
+      {
+        display : inline-block;
+        padding : 0.5vh 0.5vw;
+        width   : 80vw;
+        height  : 30vh;
+
+        color            : #008000;
+        background-color : #202020;
+        border           : 0.2vw inset #505050;
+
+        font-family : sans-serif;
+        font-size   : large;
+
+        text-align : left;
+      }
+
+    </style>
+
+  </head>
+
+
+  <!-- Body -->
+  <body>
+
+    <h1>Web Serial Template</h1>
+    <br>
+
+    <div id="chooseButton">
+      <button style="padding:1vh 1vw; font-size:x-large; cursor:pointer" onclick="ChoosePort()"> Choose Serial Device </button><br>
+    </div>
+
+    <div id="comms" style="display:none; font-size:large">
+      <div id="dataWindow"></div><br>
+      <br>
+
+      <div style="font-size:x-large">
+        Enter command :
+        <input id="commandField" type="text" style="font-size:inherit" />
+        <button style="font-size:inherit" onclick="SendCommand()"> Send </button><br>
+      </div>
+    </div>
+    <br>
+
+
+    <!-- Load script -->
+    <script src="website_serial.js"></script>
+
+  </body>
+
+</html>

@@ -1,0 +1,5 @@
+{
+    "board": "arduino:samd:nano_33_iot",
+    "port": "COM13",
+    "sketch": "SerialDevice\\SerialDevice.ino"
+}
