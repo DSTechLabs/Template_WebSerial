@@ -1,14 +1,11 @@
 //==============================================================================
 //
-//      FILE : SerialDevice.ino
+//     FILE : SerialDevice.ino
 //
-//   PROJECT : Any
+//  PROJECT : Any Chrome-based Web App requiring access to a serial device.
 //
-//  FUNCTION : Template for Serial Device
-//
-//    AUTHOR : Bill Daniels
-//             Copyright 2023-2024, D+S Tech Labs, Inc.
-//             All Rights Reserved
+//   AUTHOR : Bill Daniels (bill@dstechlabs.com)
+//            See LICENSE.md
 //
 //=============================================================================
 

@@ -2,11 +2,10 @@
 //
 //    FILE  : website_serial.js
 //
-//  PROJECT : Web Serial Template
+//  PROJECT : Any Chrome-based Web App requiring access to a serial device.
 //
-//  AUTHOR  : Bill Daniels
-//            Copyright 2023-2024, D+S Tech Labs, Inc.
-//            All Rights Reserved
+//   AUTHOR : Bill Daniels (bill@dstechlabs.com)
+//            See LICENSE.md
 //
 //=============================================================================
 
