@@ -1,13 +1,14 @@
-//=============================================================================
+//=========================================================
 //
 //    FILE  : website_serial.js
 //
-//  PROJECT : Any Chrome-based Web App requiring access to a serial device.
+//  PROJECT : Any Chrome-based Web App requiring access
+//            to a serial device.
 //
 //   AUTHOR : Bill Daniels (bill@dstechlabs.com)
 //            See LICENSE.md
 //
-//=============================================================================
+//=========================================================
 
 //--- Globals ---------------------------------------------
 
@@ -163,7 +164,7 @@ async function OpenPort ()
       document.getElementById ('chooseButton').style.display = 'none';
       document.getElementById ('comms'       ).style.display = 'inline';
 
-      dataWindow.innerHTML = 'Port opened<br>';
+      AddToLog ('Port opened');
 
       // Listen for incoming data
       await ReadLoop ();
@@ -207,7 +208,7 @@ function ProcessMessage (message)
 {
   try
   {
-    dataWindow.innerHTML += '──▶ ' + message + '<br>';
+    AddToLog ('──▶ ' + message);
   }
   catch (ex)
   {
@@ -224,7 +225,7 @@ function SendCommand ()
     const command = document.getElementById ('commandField').value;
 
     SerialWriter.write (command + '\n');
-    dataWindow.innerHTML += '◀── ' + command + '<br>';
+    AddToLog ('◀── ' + command);
   }
   catch (ex)
   {
@@ -262,6 +263,21 @@ async function ClosePort ()
 
       PortOpened = false;
     }
+  }
+  catch (ex)
+  {
+    alert (ex);
+  }
+}
+
+//--- AddToLog --------------------------------------------
+
+function AddToLog (htmlMessage)
+{
+  try
+  {
+    dataWindow.innerHTML += htmlMessage + '<br>';
+    dataWindow.scrollTop = Number.MAX_SAFE_INTEGER;
   }
   catch (ex)
   {
